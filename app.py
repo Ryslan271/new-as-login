@@ -12,15 +12,6 @@ app = Flask(__name__)
 engine = create_engine('sqlite:///tutorial.db', echo=True)
 app.secret_key = os.urandom(12).hex()
 
-postgresURI = config['db']['db_url']
-application.config['SQLALCHEMY_BINDS'] = {
-                                        'tutorial.db': postgresURI
-                                        }
-application.config['SQLALCHEMY_DATABASE_URI'] = postgresURI
-
-
-application.config['SQLALCHEMY_DATABASE_URI'] = postgresURI
-
 
 @app.route("/")
 def home():
