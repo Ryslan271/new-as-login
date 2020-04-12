@@ -2,5 +2,3 @@ flask
 flask_ngrok
 sqlalchemy
 flask_wtf
-flask_sqlalchemy
-v3.setup.config
