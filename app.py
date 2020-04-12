@@ -4,6 +4,8 @@ from flask_wtf import FlaskForm
 from wtforms import StringField, PasswordField, BooleanField, SubmitField
 from wtforms.validators import DataRequired
 from sqlalchemy.orm import sessionmaker
+from flask_sqlalchemy import SQLAlchemy
+from v3.setup.config import config
 import os
 
 app = Flask(__name__)
