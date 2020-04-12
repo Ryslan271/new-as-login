@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Flask Webinar 2.0</title>
+</head>
+<body>
+{% block content %}
+    {% for post in news %}
+        <div class="post">
+            <div class="title">{{ post.title }} ({{ post.formated_date() }})</div>
+            <div class="content">{{ post.content }}</div>
+        </div>
+    {% endfor %}
+{% endblock %}
+</body>
+</html>
