@@ -30,17 +30,12 @@ def contact():
     return render_template('Contact.html')
 
 
-@app.route("/regist")
-def regist():
-    return render_template('regist.html')
-
-
 @app.route('/regist')
 def homereg():
     if not session.get('logged_in'):
         return render_template('login.html')
     else:
-        return "Hello Boss!  <a href="/logout, ">Logout</a>"
+        return "Hello Boss!  <a href="/logout">Logout</a>"
 
 
 @app.route('/login', methods=['POST'])
@@ -50,6 +45,7 @@ def do_admin_login():
     POST_PASSWORD = str(request.form['password'])
 
     Session = sessionmaker(bind=engine)
+
     s = Session()
     query = s.query(User).filter(User.username.in_([POST_USERNAME]), User.password.in_([POST_PASSWORD]))
     result = query.first()
