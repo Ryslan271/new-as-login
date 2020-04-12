@@ -53,7 +53,7 @@ def do_admin_login():
         session['logged_in'] = True
     else:
         flash('wrong password!')
-    return homereg()
+    return homereg(), render_template('dummy.py')
 
 
 @app.route('/test')
