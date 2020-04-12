@@ -35,7 +35,7 @@ def homereg():
     if not session.get('logged_in'):
         return render_template('login.html')
     else:
-        return "Hello Boss!  <a href="/logout">Logout</a>"
+        return "Hello Boss!  <a href="/logout, ">Logout</a>"
 
 
 @app.route('/login', methods=['POST'])
