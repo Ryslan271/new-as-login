@@ -8,6 +8,7 @@ import os
 
 app = Flask(__name__)
 engine = create_engine('sqlite:///tutorial.db', echo=True)
+app.secret_key = os.urandom(12).hex()
 
 
 @app.route("/")
